@@ -11,3 +11,9 @@
 <li><a href='#section1'>The Big O Notation</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
+
+<h3>What is Big O</h3>
+
+<p>The Big O Notation is a mathimatical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.</p>
+
+<p>The Big O Notation is used to describe the performance of an algorithm and this helps is determine of a given algorithm is scalable or not. Which basically means is an algorithm going to scale well as the input grows really large. Just because the code executes quickly on our computer doesn't mean it's going to perform well when you give it a large data set. Big companies are always asking about Big O, they want to know if we really understand how scalable an algorithm really is.</p>
