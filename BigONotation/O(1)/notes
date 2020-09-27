@@ -1,0 +1,27 @@
+This is the notes for O(1)
+
+for our first example we have a function that takes an array of integers and 
+logs the first item on the console Now matter how big the array is 
+
+this function only has a single operation and takes a constant 
+amount of time to run
+we don't hear about the exact execution time in milliseconds because that differs 
+from machine to another or even on the same machine
+
+All we care about is that the function runs in constant time 
+and we represent it using the big o of 1
+
+this is the time complexity of this function 
+so in this example the size of the input does not matter 
+the function will always run in constant time or big O of 1
+
+now lets say we duplicate the line we now have 2 operations
+that run in constant time so the runtime complexity of this function 
+is big O of 2
+
+Now when talking about the runtime complexity
+we dont really care about the number of operations 
+we just want to know how much of an algorithm slows down as the input grows larger
+
+so in this example whether we have 1 or 100 items our function runs in constant time 
+we can simply our big O by saying O of 1 meaning constant time 
