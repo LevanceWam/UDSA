@@ -1,0 +1,16 @@
+This is the notes for O(2^n)
+
+the last growth rate we are going to talk about is exponential growth O(2^n)
+which is the opposite of logarithmic growth O(log n)
+
+the logarithmic curve slows down as the input size grows 
+but exponential curve grows faster and faster 
+obviously a algorithm runs in exponential time is not scalabe at all
+it will become real slow real soon
+we will see an example in code later in the future 
+
+all we need to understand is that exponential growth is the opposite of logarithmic growth
+also heads up there are more growth rates we haven't talked about but 
+the ones we talked about is the one we see most of the time 
+
+so we need to try and remember these ones 
