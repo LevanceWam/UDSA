@@ -1,0 +1,37 @@
+This is the notes for O(n^2)
+
+in the previous lecture we learned that simple loops running the linear time 
+or O(n)
+
+But now we have nested loops.
+this is the algorithm we use to print all the combonations of items in a array
+so what is the runtime complexity here?
+
+in the outer loop we are iterating over our input array so here we have O(n)
+
+now in each iteration once again we are iterating over all the items in this array
+another example of O(n)
+
+so the runtime complexity of this method is O(n*n) or O(n^2)
+
+so we would say that this method runs in quadratic time
+algorithm that run in O(n^2) is slower than algorithms that run in 
+O(n). This of course depends on the size of the input 
+now if we had an array of 50 items we won't see a difference 
+but as the input grows larger and larger algoritms that run 
+O(n^2) run slower and slower
+
+now what if we had another loop before or after this loop?
+what is the runtime complexity of this method 
+well the function is O(n) and then 
+this method is going to be O(n + n^2)
+now lets simplify this 
+the sqaure of (n^2) is always greater than the number itself 
+so in this expression (n^2) always goes faster than n again use the
+Big O notation to understand how much the cost of an algorithm increases
+all we need is an approximation not an exact value 
+so we can concluded that it runs in O(n^2)
+
+one more example what would happen if we nested another loop nested inside
+the runtime complexity of the method now is O(n^3) 
+this algorithm gets far slower than O(n^2)
