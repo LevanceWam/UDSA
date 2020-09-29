@@ -1,0 +1,53 @@
+This is the notes for UnderstandingArrays
+
+arrays are the simplest data structures and we use them
+to store a list of items like a list of string, numbers, etc
+these items are stored sequentially in memory
+
+for this very reason looking up an array is super fast 
+we give our array indexes and it will figure it out where it is 
+exactly in the memory we should access it 
+
+now what would be the runtime complexity of an array like this:
+[1,2,3,4,5]
+for the lookup scenario it would be O(1) because the calculation and the memory address
+is very simple it doesn't invovle any loops or complex logic
+
+if we are need to store a list then arrays is the best way to go
+
+Now lets look at some of the weakness of arrays in many of the code languages
+arrays are static whihc means when we allocate them we should specify their size 
+and this size can not change later so we need to know how many items are 
+going to be stored ahead of time 
+
+if we don't know then we have to make a guess and if we guess to high we wull waste
+memory because we'll have cells that are never filled and if 
+it is too small it gets filled quickly and if we need to add another item
+we need to resize the array which means we should allocate
+a larger array and then copy all the items in the old array
+into the new array this operation can be costly 
+
+Now what would be the runtime complexity of something like this?
+the run time complexity of this algorithm for the insert scenario is O(n) 
+so if we had an array with 5 items and we added a sixth 
+we would have to allocate a new array and copy the previous 5 into the new array
+this means the cost of copying these items into the array increases
+linearly and in direct proporation to the size of the array 
+
+now what about removing a item?
+here is a couple scenerio:
+removing the last item this is pretty easy and we can quickly 
+look it up and clear its memory so here we have O(1) this would be the best case scenario
+
+But, When doing Big O analysis we should think of the worse case scenerio
+what is the worse case scenerio here? 
+this is when we would want to want to remove the first element and then shift all of the
+items on the right to the left to fill in the hole the more items we have 
+the more the shifting operation is going to cost 
+so for the worst case scenerio deletion is an O(n)
+
+so for situation we don't know how many items we want to store in a array
+or when we need to add or remove a lot of items from them they don't perform well 
+
+in those cases we are going to need a linked list which we will learn about later.
+
