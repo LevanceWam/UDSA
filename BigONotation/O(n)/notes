@@ -1,0 +1,56 @@
+This is the notes for O(n)
+
+In this example we have a loop that is iterating over the items in a array 
+and printing them.
+
+this is where the size of the input matters. if we had 1 item in the array 
+we would have 1 print operation, if we hand 100 we would have 100
+
+so the cost of this algorithm grows linearly and in direct correlation
+to the size of the input 
+
+so we represent the runtime complexity of this method  using the 
+big O(n) the n here represents the size of the input 
+so as n grows so does the cost of this algorithm also grow linearly
+and it doesn't matter what kind of loop we use 
+
+Now here is a question if we had a print statement of at the beginning and the end of the loop
+how will this affect our runtime complexity 
+
+well we know that these single operations run in constant time O(1)
+our loop runs in O(n)
+and then again we have O(1)
+
+so the run time complexity of this method is O(1+n+1)
+which we can simplify to O(2+n)
+
+however in when using Big O notation we drop these constants because
+they don't really matter 
+here is the reason if our array has a million inputs 
+adding 2 extra 2 operations doesn't really have a significant impact
+on the cost of our algorithm the cost of our algorithm still increase 
+linear 
+
+so we simplify it by dropping the constant it should look like this O(n)
+the thing that matters here is that it increases linearly and in direct 
+proporation of the size of our input 
+
+now what if we had 2 loops?
+what would be the runtime complexity of this method 
+it would be O(n+n) -> O(2n)
+this is another example of where we drop the constant because all we 
+need is the approximation of the cost of the algorithm relative to its input size 
+so n or 2n represents a linear gross 
+
+now what if this method had 2 paramters an array of numbers and a array of names 
+what will the runtime complexity be here?
+
+well both of these loops run the O(n) that tricky part here is what is (n) in this case
+we are not dealing with one input we have 2. numbers and names  so we need to distinguish
+each between these 2 inputs we could use (n) for the size of the first input 
+(m) for the size of the second input
+
+so the runtime complexity of this method is O(n+m) and we can simplify this to O(n)
+because the run time if this method increases linearly.
+
+
