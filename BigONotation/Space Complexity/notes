@@ -1,0 +1,15 @@
+this is the notes for Space Complexity
+
+now that we know that we can use Big O notation to describe the runtime Complexity
+of our algoritms in a ideal world we want our algorithms to be super fast and scalable 
+and take minimum amount of memory but unfortunately that hardly happens 
+
+most of the time we have to do a trade off between saving time or saving Space
+
+so we need a way to talk about how much space a algorithm requires
+and this is where we use the big O notation again lets look at a few examples
+
+first we have a greet method that takes a array of strings and prints a message
+with all of the names in the array
+
+download the video
