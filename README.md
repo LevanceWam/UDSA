@@ -17,3 +17,15 @@
 <p>The Big O Notation is a mathimatical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.</p>
 
 <p>The Big O Notation is used to describe the performance of an algorithm and this helps is determine of a given algorithm is scalable or not. Which basically means is an algorithm going to scale well as the input grows really large. Just because the code executes quickly on our computer doesn't mean it's going to perform well when you give it a large data set. Big companies are always asking about Big O, they want to know if we really understand how scalable an algorithm really is.</p>
+
+<h3>Growth Rates</h3>
+
+<p>These growth rates are used to define our algoritm's run time complexity. Depending on the notation it tells us about the behavior of our function. These are a few of the different kind of growth rates out there.</p>
+
+<ul>
+    <li>Constant O(1)</li>
+    <li>Logarithimc O(log n)</li>
+    <li>Linear O(n)</li>
+    <li>Quadratic O(n^2)</li>
+    <li>Exponential O(2^n)</li>
+</ul>

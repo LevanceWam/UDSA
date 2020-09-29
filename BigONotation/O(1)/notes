@@ -5,7 +5,7 @@ logs the first item on the console Now matter how big the array is
 
 this function only has a single operation and takes a constant 
 amount of time to run
-we don't hear about the exact execution time in milliseconds because that differs 
+we don't care about the exact execution time in milliseconds because that differs 
 from machine to another or even on the same machine
 
 All we care about is that the function runs in constant time 
