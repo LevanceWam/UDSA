@@ -36,3 +36,5 @@
 <h2 id=section2>Arrays</h2>
 
 <p>Arrays are data structures that are built into most programming languages and we use them to store a list of items sequentially. We are going to look at the various strengths and weakness of arrays. We are going to see how to use them and build a array class from scratch. </p>
+
+<a href="#home">Top</a>
