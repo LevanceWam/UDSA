@@ -1,0 +1,22 @@
+We are going to build a linked list from scratch this lecture 
+
+to start we are going to need 2 classes one being the class called node
+this will have a value field and a node field called next so with the node field we can keep a 
+reference to the next node 
+
+we are going to need a linkedList class with these 2 field 
+first or head 
+last or tail
+
+the methods we need to make for this class are 
+addFirst 
+addLast
+deleteFirst 
+deleteLast
+contains
+indexOf
+
+These are the essential methods that we need in a linked list
+this is important because later on in other sections we are going to have to make stacks and queques and we are
+going to implement them using linked list so linked list is one of those essential
+fundamental data stuctures that we need to master 
