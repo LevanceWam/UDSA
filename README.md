@@ -41,3 +41,9 @@
 <a href="#home">Top</a>
 
 <h2 id=section3>Linked List</h2>
+
+<h3>What are Linked Lists</h3>
+
+<p>We use linked list to keep a list of objects in sequence. But unlike arrays linked lists grow and shrink automatically. A linked list consist of a group of nodes in sequence. Each node holds 2 pieces of data one is a value and the other is the address of the next node in the list. So each node points or references the next node. This is why we refer to these structures as linked list because the nodes are linked together.</p>
+
+<p>The First node is called a head and the last one is called a tail.</p>
