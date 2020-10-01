@@ -1,0 +1,28 @@
+We are going to create the removeFirst method
+
+This method should be able to go to the top of the list and 
+remove the first node and its next should be the new 
+first node.
+
+so first we want to write a if statement if the 
+list is empty
+
+if the first node is null then we are going to throw a error and notify the user 
+that the list is empty
+
+Then we are going to wan to write another statement for if there is only one node
+the method is really good for multiple nodes
+but if we find only one node we will get a error because this is also the last item in the 
+list
+So we are going to check if the first node is the last node and if they are 
+set them to null and return not allowing the rest of the function to run
+
+now to write the logic for removing the first node 
+so as it stands we just don't want to delete the node becasue it will destory our link
+this is bad want we want to do is reference the link and have it continue 
+
+so first we need to store the the node that comes after the first in a variable 
+so we would call first.next
+then we are going to want to set the first node to null
+wiping it out and then we are going to want to set the first node to the variable
+were we stored the node that was after the first one 
