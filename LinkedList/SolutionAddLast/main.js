@@ -6,29 +6,25 @@ class ListNode {
 }
 
 class LinkedList {
-    constructor(first = null) {
+    constructor(first = null, last = null) {
         this.first = first;
+        this.last = last;
     }
 
     addLast(value) {
         let newNode = new ListNode(value);
 
-        if (!this.first) {
-            this.first = newNode;
-            return this.first
+        if (this.first == null) {
+            this.first = this.last = newNode;
+        } else {
+            this.last.next = newNode;
+            this.last = newNode;
         }
-
-        let last = this.first;
-        while (last.next !== null) {
-            last = last.next;
-        }
-
-        last.next = newNode;
-
-        return this.first;
     }
 }
 
 let list = new LinkedList();
 list.addLast(1);
+list.addLast(3);
+list.addLast(5);
 console.log(list)

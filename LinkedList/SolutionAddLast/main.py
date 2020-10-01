@@ -7,23 +7,21 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.first = None
+        self.last = None
 
     def addLast(self, value):
         newNode = Node(value)
 
-        if (not self.first):
-            self.first = newNode
-            return self.first
-
-        last = self.first
-        while (last.next):
-            last = last.next
-
-        last.next = newNode
-        return self.first
+        if (self.first is None):
+            self.first = self.last = newNode
+        else:
+            self.last.next = newNode
+            self.last = newNode
 
 
 ll = LinkedList()
 ll.addLast(4)
 ll.addLast(2)
+ll.addLast(5)
+ll.addLast(6)
 print(ll)
