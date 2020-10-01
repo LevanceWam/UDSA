@@ -38,6 +38,9 @@ class LinkedList:
             index += 1
         return -1
 
+    def contains(self, item):
+        return self.indexOf(item) is not -1
+
 
 ll = LinkedList()
 ll.addLast(4)
@@ -45,4 +48,5 @@ ll.addLast(2)
 ll.addLast(5)
 ll.addFirst(9)
 print(ll.indexOf(4))
+print(ll.contains(9))
 print(ll)
