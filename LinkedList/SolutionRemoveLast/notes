@@ -1,0 +1,30 @@
+Here we are adding the method removeLast
+This method removes the last node in the linkedList
+
+To start we are going to need to get the previous node before the last node 
+and set the last node to the previous one 
+so we are going to make a seperate method called getPrevious to handle this task
+
+in this method we are going to have to traverse through the list to find the node before the last one 
+so we make a variable called current and set it to the first node
+
+from here we are going to make a while statement to traverse through the list 
+inside of this while statement we are going to set up a if statement 
+
+In the if statement if the current node next value equals the last node
+we are going to return that node 
+if it doesn't we continue with the seach by setting current to the next value
+
+if the node we are looking for doesn't exist we will return null
+
+now that the getPrevious method is done we are going to work on removeLast method
+now in this method we are going to borrow 2 of the if statements from removeFirst so we dont 
+run into any problems those being if the list is empty and if there is only one node 
+
+after getting the if statements we are going to call the method 
+getPrevious and pass the last node as a agrument because we want the 
+previous node to that 
+we are going to store it in a variable called previous
+
+Next we are going to set the last node value to previous 
+then we are going to set our new last next value to null to cut the link to the old last node 
