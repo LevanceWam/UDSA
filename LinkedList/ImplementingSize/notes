@@ -1,3 +1,33 @@
 This is the notes for ImplementingSize
 
 we are going to implement a method to get the size of the linked list
+
+One way we could have done this is by travesing the list and count the amount
+of nodes that is in the list. This method is a little uneffiecent beceause
+everytime we add a new node we have to count through the list again
+if we have a really big list we don't want to have to travese it to
+get the size of it
+
+so what we can do is create a private field called size and every time 
+we add a new node we increment it by 1 
+then following the same logic we can decrement it by 1 when we remove a node
+
+then in the size method we are going to return the size to get the size of the list 
+now if we add or remove we should see a chance in the size 
+
+Something we need to remember is that when we are implementing methods 
+we need to think of the efficency of the method
+this method we made is a O(1)
+
+the other one we mentioned above is a O(n)
+
+now there is something we need to look into
+In the removeLast and removeFirst methods where we are affecting the size of the 
+list
+
+in our if statement were if the first node and the last node are the same we jump of this
+method 
+
+this stops rest of the code from executing and the size of the list won't increment or decrement
+so what we should do get rid of the return and add a else statement
+now we get one or the other logic to be executed and our size increment or decrement will run

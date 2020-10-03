@@ -84,11 +84,21 @@ class LinkedList:
     def getSize(self):
         return self.size
 
+    def toArray(self):
+        array = []
+        current = self.first
+        index = 0
+        while(current is not None):
+            array.append(current.value)
+            index += 1
+            current = current.next
+        print(array)
+
 
 ll = LinkedList()
 ll.addLast(4)
 ll.addLast(2)
 ll.addLast(5)
 ll.addFirst(9)
-ll.removeFirst()
-print(ll)
+ll.toArray()
+print(ll.getSize)
