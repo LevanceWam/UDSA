@@ -52,11 +52,11 @@ class LinkedList:
 
         if (self.first is self.last):
             self.first = self.last = None
-            return
+        else:
+            second = self.first.next
+            self.first = None
+            self.first = second
 
-        second = self.first.next
-        self.first = None
-        self.first = second
         self.size -= 1
 
     def getPrevious(self, node):
@@ -74,12 +74,15 @@ class LinkedList:
 
         if (self.first is self.last):
             self.first = self.last = None
-            return
+        else:
+            previous = self.getPrevious(self.last)
+            self.last = previous
+            self.last.next = None
 
-        previous = self.getPrevious(self.last)
-        self.last = previous
-        self.last.next = None
         self.size -= 1
+
+    def getSize(self):
+        return self.size
 
 
 ll = LinkedList()

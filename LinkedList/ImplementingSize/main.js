@@ -57,13 +57,11 @@ class LinkedList {
 
         if (this.first == this.last) {
             this.first = this.last = null;
-            return;
+        } else {
+            let second = this.first.next;
+            this.first = null;
+            this.first = second;
         }
-
-        let second = this.first.next;
-        this.first = null;
-        this.first = second;
-
         this.size--;
     }
 
@@ -81,16 +79,17 @@ class LinkedList {
 
         if (this.first == this.last) {
             this.first = this.last = null;
-            return;
+        } else {
+            let previous = this.getPrevious(this.last);
+            this.last = previous;
+            this.last.next = null;
+
         }
 
-        let previous = this.getPrevious(this.last);
-        this.last = previous;
-        this.last.next = null;
         this.size--;
     }
 
-    size() {
+    getSize() {
         return _size.get(this);
     }
 
