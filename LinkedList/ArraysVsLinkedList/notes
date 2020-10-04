@@ -1,0 +1,59 @@
+This is the notes for ArraysVsLinkedList
+
+One of the common interview questions is the difference 
+between a array and a linked ArraysVsLinkedList
+
+we need to be able to describe the differences in terms of acquired memory
+and time complexity of various operations 
+
+arrays or more accurately static arrays have a fixed size
+so if we don't know how many items we are going to be storing we 
+would want to use dynamic arrays or make a list 
+
+Dynamic arrays grow by 50 - 100% of their size when they get full
+and we might end up wasting memory 
+
+Linked list on the other hand take only the amount of memory they need nothing more
+that being said linked list take a bit of extra memory beacuse each node
+store the address of each node in addition to a value
+
+so if we know ahead of time roughly how many items we are going to store we need to use an array
+either static or dynamic
+this is because arrays have a smaller footprint 
+
+for example lets say we have to store up to 100 items but we are not sure 
+how many items exactly 
+in that case we might want to use a dynamic array with an initial capacity of 
+100 (like new ArrayList(100))
+
+so these are the differences in terms of space but space isn't everything 
+we should also optimize for performance 
+as we know certian operations are fast in arrays
+but are so in linked list 
+
+So it is very important that we emphasize we need to understand the problem we are trying to 
+solve 
+every problem has certian solutions 
+and every problem there is no such thing as a perfect solution
+
+we should always do tradeoffs and that is exactly what a good 
+interviewer looks for 
+they want to see if we really understand the problem 
+if we can find different solutions and explain the pros and cons of 
+each and pick one that works the best for the situation 
+
+Now lets compare them to their runtime complexity
+
+Arrays shine when we need to look up an item by it's index this is O(1) but when looking up its value it is O(n)
+with a linked list we have to travese until we find the item in the given index looking up a value
+by its value is an O(n)
+
+inserting items in a array is O(n) this is because if the array gets full we have to resize it and copy it to a new arrays
+
+in a linked list we have two choices whenit comes to inserting it can be O(1) or O(n) depeneding on where we want to add this item 
+adding at the beginning or at the end is super fast we just have tp adjust the length but adding at a given index invovles a look of index which is a O(n)
+
+finally deleting an item in a array is a O(n) operation because we have to shift items to the left to fill the whole 
+
+but with linked list if we want to delete from the beginning we just need to change the links this is O(1)
+but if we want to remove from the middle or the end we would have to traverse the list to find the previous node this is O(n)
