@@ -1,0 +1,31 @@
+This is the Recap of the section
+
+Linked List are the second most used data structures after arrays
+
+unlike arrays they grow and shrink automatically with out 
+wasting memory 
+
+but require a little bit more memory because each node should 
+have a reference to the next or previous node
+
+Here are the runtime complexities of the various operations in a linked List
+
+Looking up
+    by Value O(n)
+    by index O(n)
+This is because they both traverse the List
+
+Insert
+    Beginning/end O(1)
+    middle O(n)
+The beginning/end are O(1) because we have to simply change the links 
+The middle requires us to involve the look up 
+
+Delete
+    beginning O(1)
+    middle O(n)
+    end singly O(n) doubly(1)
+This is because we are deleting a linked
+The middle is a O(n) because we have to traverse the list (or lookup)
+Deleting from the end can be O(n)for singly because we have to find the link before the last
+and doubly is O(1) because we already have the link to the previous node so it will make it easy to find 
