@@ -94,8 +94,8 @@ class LinkedList:
             current = current.next
         print(array)
 
-    def reverse(self):
-        if (self.first is None):
+     def reverse(self):
+            if (self.first is None):
             return
 
         previous = self.first
@@ -111,11 +111,44 @@ class LinkedList:
         self.last.next = None
         self.first = previous
 
+    def getKthNodeFromEnd(self, input):
+        if (input > self.size):
+            raise Exception('Input is too big')
+
+        if (input is 0):
+            raise Exception('Needs to be greater than 0')
+
+        if (self.first is None):
+            raise Exception('It is empty')
+
+        a = self.first
+        for x in range(input, self.size):
+            a = a.next
+
+        print(a.value)
+
+    def getKthNodeFromEnd2(self, input):  # this is the way without size
+        if (self.first is None):
+            raise Exception('It is already empty')
+
+        a = self.first
+        b = self.first
+
+        for i in range(input - 1):
+            b = b.next
+            if (b == None):
+                raise Exception('The input you used is to big')
+
+        while (b is not self.last):
+            a = a.next
+            b = b.next
+
+        print(a.value)
 
 ll = LinkedList()
-ll.addFirst(9)
 ll.addLast(4)
 ll.addLast(2)
 ll.addLast(5)
-ll.addLast(6)
+ll.addFirst(9)
 ll.reverse()
+print(ll.getSize)

@@ -108,13 +108,6 @@ class LinkedList {
     reverse() {
         if (this.first == null) return;
 
-        // my attempt works but it breaks other methods 
-        // let current = this.last;
-
-        // while (current != this.first) {
-        //     current.next = this.getPrevious(current);
-        //     current = current.next;
-        // }
         let previous = this.first;
         let current = this.first.next;
         while (current != null) {

@@ -1,0 +1,72 @@
+This is the notes for ExerciseKthNodeFromTheEnd/SolutionKthNodeFromTheEnd
+
+For this exercise we are tasked to create a function
+when given a input will return a node from the list starting at the end
+
+So for example our list can be 1,2,3,4,5 and if we put 1 in the 
+function it should return 5.
+
+This is a interesting exercise because there are 2 ways to do this
+
+One is if we are allowed to use the size property 
+we have come up with a algorithm that is shorter than the alt version
+that doesn't use the size property 
+
+So in the version of this method we are going to want to check
+if the list is empty and if the input is zero
+
+if the input is greater than the size of the list then it will throw an error
+
+next we are going to store the first node in a variable 
+
+now we are going to make a for loop
+
+now in put is going to be our pointer to find the value that we want 
+so depending on the value we give i it will staet from there and count along with
+the node
+
+
+then we set i to be less than the size of the list this way it doesn't
+exceed the length and then we iterate i by 1
+
+so now if we have i = 5 the for loop will return 0 and then we get the 
+first number in the list 
+
+if we set i to 3 then we start from the 1 index and where ever 4 lands it will be that value 
+so it will start at 5 (because 4 is intialized at 0) and then when it stops at 4 it will 
+return 6 because we wrote the logic for it to stop under the size of the list and 
+return the value of our node at that exact moment
+
+the second version of this method is for if the interviewer says we do not have the size 
+property or they do not want me to use the size property
+
+in this version we are creating 2 pointers on that lands on the value we are 
+looking for and the second pointer is to let the first pointer
+know hey we have hit the end the value that you landed on is the one we are looking for 
+
+so it would be like this if we were looking for the last item in the
+list and we entered 5:
+ [9, 1, 2, 7, 4];
+  *           *
+
+the first and the second pointer has a difference inbetween the 2 of them
+so for the example above the is a difference of 4 inbetween them
+
+now into the methods to explain what is going on skipping the if statements because it is a little self explanitory
+
+so we set our 2 pointers to the beginning of the the list
+
+we create a for loop tand this for loop is going to push the second
+pointer the right distance away from the 1st pointer 
+and remember we write it like this because this we are starting at 0 not 1
+so we need to substract that 1 to get the correct distant 
+
+then in the while statement after the second pointer got its distance
+we look to see if the second point is equal to the last node if it is not change the 
+value of 1st and 2nd to the next value in the list 
+
+and when the second pointer hits the last node then we stop and return the a value
+
+
+in the python version we have to remember that when we use in range it 
+starts at one so we are subtracting for a different reason
