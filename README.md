@@ -88,3 +88,5 @@ have a reference to the next or previous node </p>
 <li>End singly O(n) doubly(1)</li>
 
 <p>The beginning is a O(1)because we are deleting a link. The middle is a O(n) because we have to traverse the list (or lookup) Deleting from the end can be O(n)for singly because we have to find the link before the last and doubly is O(1) because we already have the link to the previous node so it will make it easy to find.</p>
+
+<a href="#home">Top</a>
