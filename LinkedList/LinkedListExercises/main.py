@@ -94,8 +94,8 @@ class LinkedList:
             current = current.next
         print(array)
 
-     def reverse(self):
-            if (self.first is None):
+    def reverse(self):
+        if (self.first is None):
             return
 
         previous = self.first
@@ -145,10 +145,27 @@ class LinkedList:
 
         print(a.value)
 
+    def printMiddle(self):
+        if (self.first is None):
+            raise Exception('It is already empty')
+
+        a = self.first
+        b = self.first
+
+        while (b != self.last and b.next != self.last):
+            b = b.next.next
+            a = a.next
+
+        if (b == self.last):
+            print(a.value)
+        else:
+            print(f'{a.value}, {a.next.value}')
+
+
 ll = LinkedList()
+ll.addFirst(9)
 ll.addLast(4)
 ll.addLast(2)
 ll.addLast(5)
-ll.addFirst(9)
-ll.reverse()
-print(ll.getSize)
+ll.addLast(8)
+ll.printMiddle()

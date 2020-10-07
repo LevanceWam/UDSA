@@ -156,6 +156,23 @@ class LinkedList {
         return a.value;
 
     }
+
+    printMiddle() {
+        if (this.first == null) throw new Error('It is empty');
+
+        let a = this.first;
+        let b = this.first;
+
+        while (b != this.last && b.next != this.last) {
+            b = b.next.next;
+            a = a.next;
+        }
+
+        if (b == this.last) console.log(a.value);
+        else console.log(a.value + ', ' + a.next.value);
+
+
+    }
 }
 
 
@@ -165,5 +182,5 @@ list.addLast(5);
 list.addLast(6);
 list.addLast(3);
 list.addLast(9);
-list.getKthNodeFromEnd(1);
+list.printMiddle();
 // console.log(list);
