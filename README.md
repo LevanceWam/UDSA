@@ -42,8 +42,49 @@
 
 <h2 id=section3>Linked List</h2>
 
+<p>Linked List are the second most used data structures after arrays. Unlike arrays they grow and shrink automatically with out wasting memory. But require a little bit more memory because each node should 
+have a reference to the next or previous node </p>
+
 <h3>What are Linked Lists</h3>
 
 <p>We use linked list to keep a list of objects in sequence. But unlike arrays linked lists grow and shrink automatically. A linked list consist of a group of nodes in sequence. Each node holds 2 pieces of data one is a value and the other is the address of the next node in the list. So each node points or references the next node. This is why we refer to these structures as linked list because the nodes are linked together.</p>
 
 <p>The First node is called a head and the last one is called a tail.</p>
+
+<h3>Types of Linked Lists</h3>
+
+<p>We have 2 kinds of linked list singly and doubly. Singly list are everything we have worked with so far every node has a reference or a pointer to the next node. In doubly every node also has a reference to the previous node, what is the benefit to this? Well remember when we had to delete an item from the end of the list and we had to travese it to find the previous node before the last this is a O(n) operation. Well doubly list solves this problem because it already references the previous node this makes it a O(1). Now there is a cost with a doubly. this cost is that doubly takes more space than a singly linked list but this can be negligible for performance gain when we are removing an item at the end.</p>
+
+<p> Now both singly and doubly list can be circular which means the last node will reference the first node so we get a circle. Now what would be the benefit from this we can user these list when we need a circle for example imaginge we want to build a music player. We give it a playslist and it plays each song in the list after it reaches the last song it starts over this is a circle.</p>
+
+<h4>Simple Version</h4>
+<ul>
+    <li>Simple Linked List − Item navigation is forward only.</li>
+    <li>Doubly Linked List − Items can be navigated forward and backward.</li>
+    <li>Circular Linked List − Last item contains link of the first element as next and the first element has a link to the last element as previous</li>
+</ul>
+
+<h3>Run Time Complexities of Linked list Operations:</h3>
+
+<h4>Looking up</h4>
+
+<li>by Value O(n)</li>
+<li>by index O(n)</li>
+
+<p>This is because they both traverse the List</p>
+
+<h4>Insert</h4>
+
+<li>Beginning/end O(1)</li>
+<li>middle O(n)</li>
+
+<p>The beginning/end are O(1) because we have to simply change the links. The middle requires us to involve the look up </p>
+
+<h4>Delete</h4>
+
+<li>Beginning O(1)</li>
+<li>Middle O(n)</li>
+
+<li>End singly O(n) doubly(1)</li>
+
+<p>The beginning is a O(1)because we are deleting a link. The middle is a O(n) because we have to traverse the list (or lookup) Deleting from the end can be O(n)for singly because we have to find the link before the last and doubly is O(1) because we already have the link to the previous node so it will make it easy to find.</p>
