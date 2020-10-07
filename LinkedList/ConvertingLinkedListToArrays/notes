@@ -1,0 +1,23 @@
+this is the notes for ConvertingLinkedListToArrays
+
+we are going to create a method that converts the list into a array
+this method is expecting a regular array we can not pass a linked list 
+through the array
+
+we set variables for the array, current and index
+
+We are going to want to traverse throw the list so we are going to need a while statement 
+this while state will say as long as current is not null then we are going to add the 
+current value at a certain index
+we increment the index so different values have different indexes then
+set current to current.next for the next iteration of the while loop
+
+
+now in python we have a rule with our arrays/list that if the index doesn't have a 
+value we can not set it 
+to make it simpler since our array is empty we can not target the index and set a value
+there already has to be a value or we will get the IndexError: list assignment index out of range
+
+but in javascript we do not have this issue 
+
+at the end of the loop we can print or return the array

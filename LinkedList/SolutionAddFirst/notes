@@ -1,0 +1,15 @@
+Now we are going to add the addFirst method 
+to the linked list class
+
+we are going to add a new node to the beginning of the list
+this is going go be very similar to the add last method we did earlier 
+
+So first create the function and parameter to be passed 
+then we are going to check to see if the head is empty
+
+so if the head equals null the we are going to set the new node to the 
+head and tail (first and last)
+
+else
+we are going to set the new node next property to the previous head and 
+set the head to the new node 

@@ -1,0 +1,27 @@
+This is the notes for TypesOfLinkedList
+
+we have 2 kinds of linked list singly and doubly
+
+singly list are everything we have worked with so far 
+every node has a reference or a pointer to the next node
+
+in doubly every node also has a reference to the previous node
+ what is the benefit to this 
+ well remember when we had to delete an item from the end of the list 
+ and we had to travese it to find the previous node before the last this is a O(n) operation
+ well doubly list solves this problem because it already references the previous node this makes
+ it a O(1)
+
+now there is a cost with a doubly. this cost is that doubly takes more space than a singly linked 
+list but this can be negligible for performance gain when we are removing an item at the end 
+
+Now both singly and doubly list will be circular which means the last node will reference 
+the first node so we get a circle 
+
+Now what would be the benefit from this 
+we can user these list when we need a circle 
+for example imaginge we want to build a music player
+we give it a playslist and it plays each song in the list 
+after it reaches the last song it starts over this is a circle
+
+Your transcript or degree is not a reflection of your knowledge or capabilites

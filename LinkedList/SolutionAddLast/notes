@@ -1,0 +1,19 @@
+First we are going to work on the add last method
+this method should add a new node to the last node
+
+we start by making the method outside of the constructor
+then we are going to want to delare the function and pass a value
+this value is what will be placed at the end of the list 
+
+now inside of the function we want to declare a variable with a new node object called newNode
+
+after that we are going to want to check to see if there is anything 
+on the head of the linked list
+
+ if it is empty/null we will pass the node object as the 
+head of the list and the last node 
+
+else 
+if the head is not empty/null and there is items in the list then we will 
+set the last node to newNode
+and set last to the newNode as well this way it will know it is at the end

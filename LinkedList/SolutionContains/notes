@@ -1,0 +1,8 @@
+Now we are going to build the contains method
+
+This method will return true or false if the node exist
+
+all we have to do is write a conditional using a return
+return the indexOf a node if it is not -1 
+
+so if the indexOf statement returns a -1 it will be false 

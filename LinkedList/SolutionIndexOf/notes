@@ -1,0 +1,29 @@
+Now we are going to work on creating the indexOf method
+
+This method should return to us the index of a item in the linked list 
+but this isn't an array so we have to make the functionality our selves
+
+First thing we want to do is delcare the function and pass a parameter
+this parameter is going to be the item we search for in the list 
+
+next we are going to want to keep track of all the items in the list so 
+we created a variable called index so we can do that task
+
+we are going to set up a variable called current to keep track of which
+node we are in so we are going to set it to the first node in the list 
+
+now we are going to write a while statement
+this states that if current is not null then it will run this statement 
+until we find the node we are looking for or until it is null 
+
+inside of the while statement we are going to write a if statement 
+if the current value and the item we are searching for equal each other 
+return the index
+
+now that we are outside of the index we are going to write the logic to 
+increment the index 
+so if the item we are searching for is not in current node we are going to 
+set the node to the next value and increment the index
+
+this process will continue until we find the node we are looking for or until it reaches the end
+if we hit the end and did not find the index we will return a 1 if the node doesn't exist 

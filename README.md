@@ -10,6 +10,7 @@
 <h2>Table of Contents</h2>
 <li><a href='#section1'>The Big O Notation</a></li>
 <li><a href='#section2'>Arrays</a></li>
+<li><a href='#section3'>Linked List</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
@@ -38,3 +39,11 @@
 <p>Arrays are data structures that are built into most programming languages and we use them to store a list of items sequentially. We are going to look at the various strengths and weakness of arrays. We are going to see how to use them and build a array class from scratch. </p>
 
 <a href="#home">Top</a>
+
+<h2 id=section3>Linked List</h2>
+
+<h3>What are Linked Lists</h3>
+
+<p>We use linked list to keep a list of objects in sequence. But unlike arrays linked lists grow and shrink automatically. A linked list consist of a group of nodes in sequence. Each node holds 2 pieces of data one is a value and the other is the address of the next node in the list. So each node points or references the next node. This is why we refer to these structures as linked list because the nodes are linked together.</p>
+
+<p>The First node is called a head and the last one is called a tail.</p>
