@@ -94,3 +94,26 @@
 <h2 id=section4>Stacks</h2>
 
 <h3>What are Stacks</h3>
+
+<p>Stacks are powerful data structures that helps us solve a lot of complex programming problems. We can use them to implement the undo feature. We can use them to build compliers(ex syntax checking). We can also use stacks to evaluate arithmetic expressions. If we wanted to build a calculator and the user wanted to typr a expression like this: (1+2*3) with stacks we can evaluate the expression</p>
+
+<p>We can also use them to build navigation in our applications. For example web browers and andriod devices have a forward and backward button. We can implement these buttons using stacks.</p>
+
+<p>Now what is the structure of a stack. Well lets use the example of a stack of books. We can stack a bunch of books on top of each other, But we can only view or remove the top book. If we want to get to the bottom then we would have to remove the other books one by one. We call this Last in First out (LIFO principle) this is why we can implement stacks for our applications for our undo feature.</p>
+
+<p>Imagine each object in a stack represents an action that the user performed in a text editior. So lets say we have a action 1 & 2. So we have actions 1, 2, 3 now to undo these actions we start with the last action the last action that was performed is the first one to be undone. We take this object out of the list and use one of the methods of the stack to remove it.<p>
+
+<p>Internally we use an array or a linked list to store object in a stack. So basically a stack in a wrapper that is wrapped around either one of the data structures that gives us a different way of storing and accessing objects.</p>
+
+<h4>Stack Operations & Runtime Complexities</h4>
+
+<p>Stacks have 4 operations:</p>
+
+<ul>
+<li>Push (item) - This adds an item on top of the stack<li>
+<li>Pop() - This removes the last item on the stack<li>
+<li>Peek() - This returns the item on the top without removing the item from the stack.<li>
+<li>isEmpty() - This tells us if the stack is empty or not.<li>
+</ul>
+
+<p>Stacks do not have a look up because they were not meant for that. So we don't use stacks to store products, customers, and so on. So all of the operations in a stack are O(1).</p>
