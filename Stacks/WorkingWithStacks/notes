@@ -1,0 +1,25 @@
+This is the notes for WorkingWithStacks
+
+We are going to take a look at the stack class that we are going to be 
+building 
+
+
+We should be able to store any type in a stack
+
+We should be able to push things into the stack
+
+then there is the pop method that removes and return the last item on the stack
+so we should be able to store the stack in a varible after running this method and it 
+return the value that was removed 
+
+Then when we print the stack the item removed is not there
+
+There is also peek which returns the item on the stack with out removing it 
+we should also be able to store this into a variable and when we print it 
+it will return the item on the top of the stack
+
+side not in java they have a search method buit this is not common because 
+stacks are not meant for storing a list of objects and looking them up quickly 
+
+
+we are now going to look at a common interview question concerning stacks in the next lecture.
