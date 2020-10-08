@@ -11,6 +11,7 @@
 <li><a href='#section1'>The Big O Notation</a></li>
 <li><a href='#section2'>Arrays</a></li>
 <li><a href='#section3'>Linked List</a></li>
+<li><a href='#section4'>Stacks</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
@@ -42,10 +43,9 @@
 
 <h2 id=section3>Linked List</h2>
 
-<p>Linked List are the second most used data structures after arrays. Unlike arrays they grow and shrink automatically with out wasting memory. But require a little bit more memory because each node should 
-have a reference to the next or previous node </p>
-
 <h3>What are Linked Lists</h3>
+
+<p>Linked List are the second most used data structures after arrays. Unlike arrays they grow and shrink automatically with out wasting memory. But require a little bit more memory because each node should have a reference to the next or previous node </p>
 
 <p>We use linked list to keep a list of objects in sequence. But unlike arrays linked lists grow and shrink automatically. A linked list consist of a group of nodes in sequence. Each node holds 2 pieces of data one is a value and the other is the address of the next node in the list. So each node points or references the next node. This is why we refer to these structures as linked list because the nodes are linked together.</p>
 
@@ -90,3 +90,7 @@ have a reference to the next or previous node </p>
 <p>The beginning is a O(1)because we are deleting a link. The middle is a O(n) because we have to traverse the list (or lookup) Deleting from the end can be O(n)for singly because we have to find the link before the last and doubly is O(1) because we already have the link to the previous node so it will make it easy to find.</p>
 
 <a href="#home">Top</a>
+
+<h2 id=section4>Stacks</h2>
+
+<h3>What are Stacks</h3>
