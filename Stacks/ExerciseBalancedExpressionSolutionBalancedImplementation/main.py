@@ -11,12 +11,11 @@ class Stack:
         self.__size = 0
 
     def peek(self):
-        self.__isEmpty__()
+        self.isEmpty()
         return self.top.value
 
-    def __isEmpty__(self):
-        if (self.bottom == None):
-            raise Exception('The stack is Empty')
+    def isEmpty(self):
+        return (self.bottom == None)
 
     def push(self, item):
         newNode = Node(item)
@@ -37,7 +36,9 @@ class Stack:
         return None
 
     def pop(self):
-        self.__isEmpty__()
+        if (self.top == None):
+            raise Exception('The stack is Empty')
+
         oldtop = self.top
 
         if(self.bottom == self.top):
@@ -65,4 +66,19 @@ def stringReverser(input):
     print(string)
 
 
-stringReverser('Tiger')
+def isBalanced(input):
+    stack = Stack()
+
+    for ch in input:
+        if (ch == '('):
+            stack.push(ch)
+        if (ch == ')'):
+            if (stack.isEmpty()):
+                return False
+            stack.pop()
+
+    return stack.isEmpty()
+
+
+result = isBalanced('(1 + 2)')
+print(result)
