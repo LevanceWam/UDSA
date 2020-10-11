@@ -1,0 +1,72 @@
+This is the notes for ExerciseBalancedExpressionSolutionBalancedImplementation
+
+This is another common interview question
+we are given a string and we need to examine if the order of pairs and brackets
+are correct in a string  
+
+for example:
+'(1 + 2)'
+
+in the example string we have a open bracket '(' that is followed by a closing bracket ')'
+this is what we call a balanced string 
+
+now if we were to get rid of the closing bracket like this 
+'(1 + 2'
+the the expression is not balanced 
+here are some more examples of not balanced:
+'(1 + 2>'
+')1 + 2('
+
+here are some balanced 
+((1 + 2))
+(([1] + <2>))
+(([1] + <2>))[a]
+
+as long as it  is closed like in our code if a block isn't closed correctly it won't execute
+
+so solve this problem we need to be able to iterate through the string each character at a time 
+when we hit a closing bracket we need to look back at the previous opening 
+bracket and see if they match
+
+now we can use a stack to solve this problem because stacks
+can go backward
+
+so this is the algorithm
+We iterate through the characters
+if it is not a opening or closing character skip it do not put it in the stack
+
+If we have a opening tag we need to need to push it to the top of the stack
+when we get to a closing bracket then we look at the previous opening and see if they match 
+(so bascially push an opening tag then push a closing use get previous see if they match)
+
+if they match return true if not return false 
+
+Solution:
+
+for this exercise I made the isempty method public
+
+So before we go ahead and try to solve for all of the different expression 
+we are going to want to start with a one get the algorithm working the 
+we will try to implement the other expressions into the function 
+
+So this is our approach to the first step 
+we need to figure out how to push the opening brackets to the stack
+from the string provided 
+
+So the easiest what to do this is to write a for Of loop to iterate 
+through the string next we are going to write a if statement
+if we find a opening bracket we will then push the that character into 
+the stack
+
+Now that we have something to handle the opening bracket we are going going to work on the
+closing bracket
+
+Now we are going to write a couple of if statement.
+if the array is already empty and if the closing expression is first we return false
+If we find a closing bracket we are going to pop the top of the stack
+
+once we pop the top of the list we are going to return true or false if the list is empty
+
+Now moving forward we need to work on
+- adding more expressions 
+- and matching the closing expression to the opening expression.
