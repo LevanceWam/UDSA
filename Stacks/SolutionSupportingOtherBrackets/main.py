@@ -69,13 +69,25 @@ def stringReverser(input):
 def isBalanced(input):
     stack = Stack()
 
+    openExp = ['(', '{', '[', '<']
+    closeExp = [')', '}', ']', '>']
+
     for ch in input:
-        if (ch == '('):
+        if (openExp.index(ch)):
             stack.push(ch)
-        if (ch == ')'):
+
+        if (closeExp.index(ch)):
             if (stack.isEmpty()):
                 return False
-            stack.pop()
+            top = stack.pop()
+            if (ch == ')' and top != '('):
+                return False
+            if (ch == '}' and top != '{'):
+                return False
+            if (ch == ']' and top != '['):
+                return False
+            if (ch == '>' and top != '<'):
+                return False
 
     return stack.isEmpty()
 
