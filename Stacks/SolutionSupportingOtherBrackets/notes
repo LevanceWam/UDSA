@@ -1,0 +1,21 @@
+This is the notes for SolutionSupportingOtherBrackets
+
+We are extending from the previous exercise
+we are going to work on supporting the other opening and closing expression
+
+solution:
+
+for my solution I created a array to hold all of the right brackets and all of the left brackets 
+
+Then inside of the for Of loop I replace the algorithm that was previously there and changed it like This
+
+for the first if statement that handled pushing to the stack 
+we are now looking to see if the character of the string is in the array by using indexOf
+with indexOf this finds the index of the character if it is in the array and if it doesn't we get a -1
+so we wrote the if statement if the indexOf ch doesn't equal -1 then push the character into the stack
+
+for the next if statement just make some minor changes to it from the previous lecture 
+now after the pop we want to check and see if the  opening and closing brackets match 
+so we wrote a series of if statements to make this work
+
+in the next lecture we are going to refactor the code.

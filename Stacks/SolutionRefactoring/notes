@@ -1,0 +1,24 @@
+This is the notes for SolutionFirstRefactoring
+
+so for this exercise we need to refactor the code 
+we did a great chunk of it when we put the values inside of an array and
+used the indexof the elements to help us but we had a big if block that needed a 
+face lift
+
+solution:
+Now tackling the 4 lines of if statements
+this statement checks to see if the closing matches the opening 
+
+now I had an idea to compare the value of the arrays against eachother 
+but what I was trying to do was grab the element by the index and compare the value
+there was 2 things wrong with this :
+
+1. I had no way of getting numbers into the algorithm to target the index like I wanted
+without using magic numbers and adding a for loop making it bulky
+
+2. Even if i did find a way to increment the numbers and get the value from the index
+the values don't match so it wouldn't have worked
+
+So the option that worked the best that I shrugged off was comparing the 
+opening and closing expressions by the index
+I had everything in the list matching already I should've compared from the index a long time ago

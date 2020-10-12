@@ -1,0 +1,88 @@
+for this exercise we need to take a sring and reverse it 
+using a stack this is a common interview question concerning stack
+An explaination of the method will be provide below
+
+*Quick Note: I did not understand that for this project we were supposed to 
+build a brand new function using the stack class to solve the 
+exercise I went ahead and created a method that does what the exercise is 
+requiring of me which is not bad just wasn't very clear what we needed to do for the 
+exercise
+
+It should also be noted that these exercise were done in java
+I am coding in javascript and python. Java has a stack class already
+built into the language I have not found anything that says we have one.
+
+So mine is built from scratch and will be emproved on in the future
+Also I will be building a stack using a linked list and array
+
+Solution 1:
+
+For my attempt I created the reverse string method in the object prototype
+or as a class method in python 
+
+so what I thought would be easy to do is use the printstack method We made to return the 
+items in the stack as a string
+It is very important to stress that our implementation of printstack is our own version 
+
+With this string I took it and split it into an array using the split method 
+Because the split method takes an string and seperates its characters in to a 
+array.
+
+Then I took that said array and applied the reverse method. this takes all of the elements in the 
+array reverses the order. with this our string was reversed but it is still in a array
+
+This is where we take it to the next step and use the join method to 
+join all of elements in the array into a string
+
+We would then return the string
+now we can store the result in a variable and print the result.
+
+Solution 2:
+This is the attempt made after realizing that we needed to make a seperate function outside of 
+the stack class and create a new stack object inside of a new function to 
+create the reverse string 
+
+A small hiccup but we managed to go above and beyond 
+
+So for this we need to create a couple of things
+the function
+the stack object
+counter
+empty string 
+
+so the first thing we needed to do was create a function and 
+create a parameter for the user to pass the string too.
+
+now that this is done we create a new stack object
+a variable called count and set it to 0
+and a variable called str and set it to a empty string
+
+the count variable is going to keep track of how many items we have in the stack
+normally this would be a job for the size property that we have but we want to 
+complete this exercise as if we didn't implement size or we don't know it  
+
+The empty string will be used to catch the reverse input given to the function
+
+Now the first task is figuring out how to get the string input 
+into the stack character by character 
+
+so for this I used a for Of loop to iterate through each character in the string
+inside of the for of block I stack.push(ch) so I pushed each character one by one into the stack
+and after each character is pushed we iterate the count variable by 1
+
+Now that the string has been pushed into the stack 
+we need to figure out how to reverse it 
+
+well one of the methods that we have in the stack is called pop this returns the 
+last item in the stack
+
+So we are going to plan to pop the items and append or concat the item to the str variable!
+
+But how are we going to traverse through the stack and better yet in one try
+
+we use for loop
+we create a standard for loop and we set the number it stops at to the count we made earlier
+this way we don't  use the pop method too much or little and 
+inside of this block we are going to decrement the count 
+
+we return the string and print it to the console.

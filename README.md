@@ -11,6 +11,7 @@
 <li><a href='#section1'>The Big O Notation</a></li>
 <li><a href='#section2'>Arrays</a></li>
 <li><a href='#section3'>Linked List</a></li>
+<li><a href='#section4'>Stacks</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
@@ -42,10 +43,9 @@
 
 <h2 id=section3>Linked List</h2>
 
-<p>Linked List are the second most used data structures after arrays. Unlike arrays they grow and shrink automatically with out wasting memory. But require a little bit more memory because each node should 
-have a reference to the next or previous node </p>
-
 <h3>What are Linked Lists</h3>
+
+<p>Linked List are the second most used data structures after arrays. Unlike arrays they grow and shrink automatically with out wasting memory. But require a little bit more memory because each node should have a reference to the next or previous node </p>
 
 <p>We use linked list to keep a list of objects in sequence. But unlike arrays linked lists grow and shrink automatically. A linked list consist of a group of nodes in sequence. Each node holds 2 pieces of data one is a value and the other is the address of the next node in the list. So each node points or references the next node. This is why we refer to these structures as linked list because the nodes are linked together.</p>
 
@@ -90,3 +90,30 @@ have a reference to the next or previous node </p>
 <p>The beginning is a O(1)because we are deleting a link. The middle is a O(n) because we have to traverse the list (or lookup) Deleting from the end can be O(n)for singly because we have to find the link before the last and doubly is O(1) because we already have the link to the previous node so it will make it easy to find.</p>
 
 <a href="#home">Top</a>
+
+<h2 id=section4>Stacks</h2>
+
+<h3>What are Stacks</h3>
+
+<p>Stacks are powerful data structures that helps us solve a lot of complex programming problems. We can use them to implement the undo feature. We can use them to build compliers(ex syntax checking). We can also use stacks to evaluate arithmetic expressions. If we wanted to build a calculator and the user wanted to typr a expression like this: (1+2*3) with stacks we can evaluate the expression</p>
+
+<p>We can also use them to build navigation in our applications. For example web browers and andriod devices have a forward and backward button. We can implement these buttons using stacks.</p>
+
+<p>Now what is the structure of a stack. Well lets use the example of a stack of books. We can stack a bunch of books on top of each other, But we can only view or remove the top book. If we want to get to the bottom then we would have to remove the other books one by one. We call this Last in First out (LIFO principle) this is why we can implement stacks for our applications for our undo feature.</p>
+
+<p>Imagine each object in a stack represents an action that the user performed in a text editior. So lets say we have a action 1 & 2. So we have actions 1, 2, 3 now to undo these actions we start with the last action the last action that was performed is the first one to be undone. We take this object out of the list and use one of the methods of the stack to remove it.<p>
+
+<p>Internally we use an array or a linked list to store object in a stack. So basically a stack in a wrapper that is wrapped around either one of the data structures that gives us a different way of storing and accessing objects.</p>
+
+<h4>Stack Operations & Runtime Complexities</h4>
+
+<p>Stacks have 4 operations:</p>
+
+<ul>
+<li>Push (item) - This adds an item on top of the stack<li>
+<li>Pop() - This removes the last item on the stack<li>
+<li>Peek() - This returns the item on the top without removing the item from the stack.<li>
+<li>isEmpty() - This tells us if the stack is empty or not.<li>
+</ul>
+
+<p>Stacks do not have a look up because they were not meant for that. So we don't use stacks to store products, customers, and so on. So all of the operations in a stack are O(1).</p>

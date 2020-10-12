@@ -1,0 +1,61 @@
+This is the notes for ExerciseBuildingAStackUsingAnArray
+
+in this exercise we are going to build a stack from scratch
+using a array.
+
+We have the option to build it with a linked list but we already did that through
+out the course so we are ahead of the game.
+
+for this stack class we need to have the methods 
+push
+pop
+peek
+isEmpty
+
+Solution:
+
+Writing the algorithm for a stack using a array was a lot easier than 
+writing for the linked list but it follows the same concept 
+so lets break it down
+
+First we wanna make sure that the array is private and can not be accesed from the 
+outside so in JS we used a weakmap to store the array in and in 
+python we made the list private
+
+now that we have the array and list we need to build the class and set the constructor 
+
+Now we can work on the methods
+
+//Push
+starting with the push method 
+all we need to do is create a function that accepts a item
+we then take that item and push it in the array for JS
+and for python we are appending it 
+we need to rememeber that this is a stack so it should be only be adding items
+to the end of the list or array
+also very important since we are using a weakmap we have to call the get method 
+and pass this so we are referencing the current object we are in and target this array
+
+//Pop
+next we are going to work on pop method
+This was another easy one first we want to create a if statement to make sure that the stack isnt 
+empty we do this by checking to see if the length of the array/list is not 0
+how we find this in JS and Python is a little different so be careful
+next we want to call the pop method on the array/list
+and it will remove the last item on the stack and we are going to return the item that was popped
+
+//Peek
+now we are going to tackle the peek method now 
+all we want to do is return the item on the top of the stack 
+So first again we write a if statement to check and see if the 
+the stack is empty first 
+if it is not empty we are going to call the array and use it's bracket notation to 
+access the elements in the array/list by their index number 
+now how we are going this is fun
+so in the bracket notation we are going to want to get the length of the stack and subtract it by one
+this will give us the last item in the array/list
+
+//isEmpty
+for this function all we are going to do 
+return a conditional if the length of the stack is 0 or not
+if it returns 0 we get true if not we get false
