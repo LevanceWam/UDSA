@@ -80,17 +80,10 @@ def isBalanced(input):
             if (stack.isEmpty()):
                 return False
             top = stack.pop()
-            if (ch == ')' and top != '('):
-                return False
-            if (ch == '}' and top != '{'):
-                return False
-            if (ch == ']' and top != '['):
-                return False
-            if (ch == '>' and top != '<'):
-                return False
+            return closeExp.index(ch) == openExp.index(top)
 
     return stack.isEmpty()
 
 
-result = isBalanced('(1 + 2)')
+result = isBalanced('(1 + 2>')
 print(result)
