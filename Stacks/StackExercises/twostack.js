@@ -1,4 +1,4 @@
-const Stack = require('./main');
+const Stack = require('./stack');
 const _array = new WeakMap();
 
 class TwoStacks {
