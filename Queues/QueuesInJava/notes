@@ -1,0 +1,21 @@
+This is the notes for QueuesInJava
+
+In java Queues are a interface not a class it can not be instantiated or new up.
+interfaces do not have code like classes so we can not instantiate them
+But this is the case for java and the already have this built in 
+we do however need to look into interfaces and know what they are:
+
+An interface is a syntactical contract that an entity should conform to. In other words, an interface defines the syntax that any entity must adhere to. 
+Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members.
+
+JS and Python on the other hand do not have this luxuary. We have to build this 
+from scratch so for the first attempt we are going to build a queue using a linkedList
+and later on in the section we are going to build it with a array so all we need to do 
+is build it with some simple methods
+like enqueue adding to the back
+dequeue remove from the front 
+peek
+isEmpty
+There is a isFull method but this applies more to the java because we can set a limit to arrays there 
+in JS and Python our arrays,list are dynamic so it would defeat the purpose 
+but we will come up with some logic that way if we are asked about it then we can answer the question.
