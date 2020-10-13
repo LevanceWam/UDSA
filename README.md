@@ -12,6 +12,7 @@
 <li><a href='#section2'>Arrays</a></li>
 <li><a href='#section3'>Linked List</a></li>
 <li><a href='#section4'>Stacks</a></li>
+<li><a href='#section5'>Queues</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
