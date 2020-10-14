@@ -22,6 +22,8 @@ class Queue:
         if (self.front == None):
             raise Exception('The Queue is empty')
 
+        previous = self.front
+
         if(self.front == self.back):
             self.front = self.back = None
         else:
@@ -29,10 +31,17 @@ class Queue:
             self.front = None
             self.front = second
 
-        return self.front.value
+        return previous.value
 
     def peek(self):
         return self.front.value
 
     def isEmpty(self):
         return (self.front == None)
+
+    def getQueue(self):
+        array = []
+        while (self.front != None):
+            array.append(self.dequeue())
+
+        return array
