@@ -25,6 +25,8 @@ class Queue{
     dequeue(){
         if (this.front == null) throw new Error('The Queue is empty');
 
+        let previous = this.front;
+        
         if(this.front == this.back){
             this.front=this.back=null;
         }else{
@@ -33,7 +35,7 @@ class Queue{
             this.front = second;
         }
 
-        return this.front.value;
+        return previous.value;
     }
 
     peek(){
@@ -43,6 +45,16 @@ class Queue{
 
     isEmpty(){
         return (this.front == null);
+    }
+
+    getQueue(){
+        let array = [];
+        while (this.front != null){
+            array.push(this.dequeue())
+
+        }
+
+        return array;
     }
 }
 
