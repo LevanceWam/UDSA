@@ -1,0 +1,35 @@
+This is the notes for SolutionCircularArrays
+
+*NOTE*
+The reason why there is no code in this folder is because when we 
+were building the ArrayQueue class one of the methods isFull was to be implemented
+now this method was supposed to be implement because in java we can define the size of the 
+array from the start but in languages like JS and Python our arrays are dynamic 
+so this defeats the purpose but I will take notes and come up with a solution in my version
+of stacks, linkedList, and queues because I have a suspicison that they might ask me to go that longer route
+
+So the problem that we would be getting is in the previous video ewe implement a if statement that checked the counter
+against the length of the array if the counter and the array length are equal then we shouldn't add any more items
+
+But there is an issue when lets say that we try to add a item at the last index 
+well naturally this should throw a error but not a error that we set to catch us if we try to push more items than the array can handle
+basically we are using pointers to keep track of the rear/end of the list but when we try to add at the end of the list the 
+pointer will be set to a number higher than the array 
+so for this example we will say the array length is 5 and the rear pointer counter hit 5 
+we have to remember that the index of the array is (0-4) so we are exceeding the array
+so the rear is pointing out side of the array
+
+Another note is that we have a implementation that is a little easier to do when setting a limit 
+first we make a private property and set this to the limit we want our array to hit 
+we set up some if statements that if the array and the limit are the same to throw an error and 
+return out if the function 
+then we can do a isFull method to return true or false if the array is isFull
+can be applied to linked list,stacks and queues 
+
+This lecture is here to explain a very important and powerful concept
+in data structure called circular arrays 
+
+we are going to download the video
+
+
+ 
