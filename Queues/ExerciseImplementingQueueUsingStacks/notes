@@ -1,0 +1,11 @@
+This is the notes for ExerciseImplementingQueueUsingStacks
+
+Another popular interview question is implementing a queue using 
+a stack 
+
+now the trick part about this is that stacks follow LIFO so even though 
+the order the items go in the stack are correct the item that is popped or removed from the 
+stack is not so we have to find a way to remove the items from the stack in the right order
+
+Solution:
+
