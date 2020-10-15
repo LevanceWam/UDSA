@@ -12,6 +12,7 @@
 <li><a href='#section2'>Arrays</a></li>
 <li><a href='#section3'>Linked List</a></li>
 <li><a href='#section4'>Stacks</a></li>
+<li><a href='#section5'>Queues</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
@@ -117,3 +118,31 @@
 </ul>
 
 <p>Stacks do not have a look up because they were not meant for that. So we don't use stacks to store products, customers, and so on. So all of the operations in a stack are O(1).</p>
+
+<a href="#home">Top</a>
+
+<h2 id=section5>Queues</h2>
+
+<p>Queues have a lot of applications in the real world. They are used by printers, operating systems, web servers basically anywhere we want to process jobs based on how we recieve them.</p>
+
+<h3>What are Queues</h3>
+
+<p>A queue is a data structure that is similar to a stack. Expect the first item that is added is the first one that can be removed. This is what we call First In First Out (FIFO). Remember that stacks are LIFO. One Example of a queue is a line of people. People join from the back and leave from the front. Here's a example of using a queue in a application. We can use them in situation where we have a resource and the resource musted be shared among many customers. The customers have to line up one by one to use the resources.</p>
+
+<p>Some examples include: Printers, printers uses queues to manage jobs it prints these jobs in the order they are submitted. Operating systems uses queues to manage processes, these processes wait in a queue for their turn to run. Web servers use them to manage incoming request these request go in a queue and are processed in the order they are recieved. Another application of this is when we are using live support systems. Let's say that we have a problem with a web host or product and we go to their customer support. now there will be someone there taking peoples request but they can not work with everyone at the same time. So the people are put into a queue.</p>
+
+<h4>Priority Queues</h4>
+
+<p>Priority Queues are where our items are processed based on their priority and we should note that adding new items to a prioroty list is a O(n) operation because items may have to be shifted. </p>
+
+<h4>Queues Operations & Runtime Complexities</h4>
+
+<ul>
+<li>Enqueue - for adding a item to the back of the queue.</li>
+<li>Dequeue - for removing a item from the front of the queue.</li>
+<li> Peek -to view an item from from the front with out removing it.</li>
+<li>isEmpty</li>
+<li>isFull</li>
+</ul>
+
+<p>Similar to stacks all of these operations run in O(1) or in constant time because these operations are very fast.</p>

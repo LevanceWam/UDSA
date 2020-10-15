@@ -1,0 +1,35 @@
+this is the notes for ExerciseReversingAQueue
+
+A popular interview question is to reverse a queue 
+for this exercise we need to create a new method that takes the 
+queue interface and return a reversed queue
+
+Now for this I should write 2 different versions on how to do this so we will look to the 
+solution for this 
+
+solution1:
+the first solution that we can go with is to create a method that takes a queue as a agrument
+inside of this function we will create a new stack object and this is where the magic begins
+
+first we need to make a while statement this while statement will check to see if the queue is not empty
+if it is not empty we are going to use the push method on a stack to push the returned item that is popeped from 
+the queue
+
+So to break it down simpler all we are doing is pushing the returned item from the queue into the stack
+this is because stacks follow the LIFO rule and the first item is at the bottom and the last
+item is on the top
+
+Following that logic we can now put the items we sent to the stack back to the queue
+when the items return they will be reversed because like I mention above stacks are LIFO 
+and Queues are FIFO
+
+so all we need to do is write the same while statement in reverse 
+while the stack is not empty we will push the returned item from the stack into 
+the queue.
+
+Solution2:
+Now another way we can tackle this is to create the reverse method on the queue class
+this approach is good for queues that are made using a linked list in my opinion
+
+So what we would do essentially is create a array and push the returned items from the 
+queue and once all of the items are in the array reverse it using the reverse method and return it.

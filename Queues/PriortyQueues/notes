@@ -1,0 +1,22 @@
+This is the notes for PriortyQueues
+
+This is a special kind of queue in PriortyQueues objects are processed 
+based on their priorty not the order that they entered the queue.
+
+so think of this example lets say that we have a bunch of mail
+we aren't going to open it at the moment but we are going to 
+put the most important ones at he top regradless of what order they came in.
+so the mail is now ordered by the priorty we set them 
+
+In javascript and python we do not have this built in class we have to
+implement our own version.
+
+now the explain that we were shown there were items that were pushed 
+into the queue but when we removed them they came out a different way than we had them this
+is because the priorty of the queue
+
+for example
+we pushed 5 3 2 1 in that order into the queue
+when we go to remove or pop them they come out like this 
+1 2 3 5
+This is because by default the smallest numbers come out first.

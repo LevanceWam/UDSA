@@ -1,0 +1,64 @@
+This is the notes for ExerciseBuildingPriorityQueues
+
+There are 2 ways to implement a priority queue 
+one way is to use a array and the other is to use a heap
+we will look into heaps later so lets focus on creating a 
+priority queue with a array.
+
+imagine we have a queue and we have these numbers [1 3 5 7]  and 
+we want to insert 2 
+
+In a regular queue 2 would just go to the back of the queue but in this 
+priority queue we want 2 to be inbetween 1 and 3
+[1 2 3 5 7]
+
+so the question here is how do we find the right position to insert the new number 
+we would need to find a way to iterate through the array and insert 2 on the correct index
+and when this happens we need to be able to shift the other elements indexes up by 1
+
+solution:
+
+So the method that is going to be the answer to our problem is going to be the 
+splice method.
+
+With the splice method we pick a insertion point and we can insert new values 
+at a given index.
+
+with that being said lets create the enqueue method 
+so first we want to pass the agrument element 
+
+the next thing we want to do is check to see of the list is empty if the list is empty if the list is 
+empty we want to push the what ever value is being passed 
+this is because splice array can not do anything with a empty array
+this is because The "splice()" function returns not the affected array, 
+but the array of removed elements. If you remove nothing, the result array is empty. 
+The array. splice function splices an array returns the elements that were removed
+so we will just push the element and return out of the function so that the rest of the code is not executed
+
+next comes the fun part 
+assuming that the array has elements in it already 
+we are going to create a for loop. with this loop we are going to iterate backward to check and see if the 
+element is greater than the elements in the array
+
+the reason we are starting from the back opposed to the front of the array is because 
+if we iterated from the beginning to the end we wouldn't be able to 
+shift all the elements to the right we will wind up replacing a element and the size of the array will not grow 
+
+by going to the end to the beginning this allows us to shift to the right side 
+starting from the last item if the item we are trying to insert is less than that  we are going to move the 
+item to the right side this means we are going to copy the value at that index and then go to the value before that 
+until we are able to insert the element we want 
+
+so in the for loop we set i to the length of the list, set it to 0 and decrement it 
+next we are going to write a if statement.
+this statement we are going to start at the last elemenent in the list 
+which is [i-1] the reason we have to do this is because JS will put the actual length of the list here 
+but if we remember arrays start at a index of 0.
+so if our array has a length of six and we start at six, nothing is going to happen because index 6 does not exist only 5 does
+
+we start from the last element and check to see of the new element is less than it 
+if it is not then we will use the splice method here 
+so it will take on the current iteration as the starting point then we pass a zero because we are not deleting only inserting 
+finally we pass the element here and return out of the function
+
+next we build our dequeue, peek, isEmpty, and get stack functions like we have up until this point.

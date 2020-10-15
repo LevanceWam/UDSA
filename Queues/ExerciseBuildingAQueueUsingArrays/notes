@@ -1,0 +1,15 @@
+This is the notes for ExerciseBuildingAQueueUsingArrays
+
+for this exercise we need to make a queue using a array 
+here are the methods we need to have inside of it:
+enqueue
+dequeue
+peek
+isEmpty
+
+Solution:
+This was very simple doing this task 
+I will make one note that is a bit of a slip up
+when doing the dequeue we need to use the shift method
+this method removes the first element in a array and lowers the index for the other elements
+everything else in the file is self explanatory
