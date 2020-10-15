@@ -131,6 +131,10 @@
 
 <p>Some examples include: Printers, printers uses queues to manage jobs it prints these jobs in the order they are submitted. Operating systems uses queues to manage processes, these processes wait in a queue for their turn to run. Web servers use them to manage incoming request these request go in a queue and are processed in the order they are recieved. Another application of this is when we are using live support systems. Let's say that we have a problem with a web host or product and we go to their customer support. now there will be someone there taking peoples request but they can not work with everyone at the same time. So the people are put into a queue.</p>
 
+<h4>Priority Queues</h4>
+
+<p>Priority Queues are where our items are processed based on their priority and we should note that adding new items to a prioroty list is a O(n) operation because items may have to be shifted. </p>
+
 <h4>Queues Operations & Runtime Complexities</h4>
 
 <ul>
