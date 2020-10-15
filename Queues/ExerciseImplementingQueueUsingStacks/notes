@@ -9,3 +9,13 @@ stack is not so we have to find a way to remove the items from the stack in the 
 
 Solution:
 
+This exercise was a little tricky but we managed to come through and solve the problem
+So starting off it was really simple 
+we created our enqueue method which was really easy and it is important to note that this is a O(1) 
+operation because we are just adding to the stack which is fast
+
+now on to the tricky part as we mentioned above stacks are LIFO so this 
+is the complete opposite of a queue that is FIFO
+we need to find a way to pop or remove the first item in the queue instead of the last
+
+Well one work around this is to create 2 stacks the second stack will 
