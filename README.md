@@ -151,3 +151,5 @@
 <a href="#home">Top</a>
 
 <h2 id=section6>Hash Tables</h2>
+
+<p>Now we are going to take a look at hash tables which are also called dictionaries. Hash tables give us super fast lookups and we can use them to optimize a lot of algorithms.</p>
