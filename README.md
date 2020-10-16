@@ -13,6 +13,7 @@
 <li><a href='#section3'>Linked List</a></li>
 <li><a href='#section4'>Stacks</a></li>
 <li><a href='#section5'>Queues</a></li>
+<li><a href='#section6'>Hash Tables</a></li>
 
 <h2 id=section1>The Big O Notation</h2>
 
@@ -146,3 +147,7 @@
 </ul>
 
 <p>Similar to stacks all of these operations run in O(1) or in constant time because these operations are very fast.</p>
+
+<a href="#home">Top</a>
+
+<h2 id=section6>Hash Tables</h2>
