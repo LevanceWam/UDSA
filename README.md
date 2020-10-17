@@ -152,4 +152,26 @@
 
 <h2 id=section6>Hash Tables</h2>
 
-<p>Now we are going to take a look at hash tables which are also called dictionaries. Hash tables give us super fast lookups and we can use them to optimize a lot of algorithms.</p>
+<p>Now we are going to take a look at hash tables which are also called dictionaries. Hash tables give us super fast lookups and we can use them to optimize a lot of algorithms. This is why they come up a lot in interviews.</p>
+
+<h3>What are Hash Tables</h3>
+
+<p>Hash Tables are a another kind of data structures. They give us super fast look ups and have a lot of applications. We use them in spell checkers, For example using a hash table we can quickly look up a word amongst tens of thousands of words in less than a second. They are also used in dictionaries, compilers use hash tables to quickly look up the address of functions and variables and finally they are used in code editiors with this literally anywhere we want to look up an iten super fast.</p>
+
+<p>Most if not all programming languages have support for hash tables. But under different names,
+in javascript we have objects, python we have dictionaries, they are exactly the same thing. 
+Now what makes these hash tables so fast and how do they work. At a very high level we use hash tables to store key value pairs. Let's say we want to store a list of employees and be able to quickly look up an employee by their employee #. Since each employee has a unique number we can use this number as a key and the employee object as the value.</p>
+
+<p>Now what if we wanted to store a employee in the hash table? The Hash table takes the employee number, passes it to what we call the hash function. This will tell us where the employee object should be stored in memory our hash table will then store this employee object at that location. Now we want to look up an employee by their number. The hash table once again passes the number to this hash function and it will figure out where the employee object is stored. It will grab and return it for us. </p>
+
+<p>Now the interesting thing about this hash function is that it is deterministic. This means everytime we give it the same input it will return the same value. This is why we can use it for storing and retrieving objects. This is the basic idea of hash tables. interally the hash table uses an array to store our objects we will look into that later on.</p>
+
+<h4>Hash Tables Operations & Runtime Complexities</h4>
+
+<ul>
+    <li>Insert O(1)</li>
+    <li>Lookup O(1)</li>
+    <li>Delete O(1)</li>
+</ul>
+
+<p>All of these Operations run in O(1) because the hash function tells us where in memory. Where we should store an object and look it up so. Now we don't have to iterate over the entire array of objects.</p>
