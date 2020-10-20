@@ -1,0 +1,14 @@
+This is the notes for ExerciseFindTheFirstRepeatedCharacter
+
+Another popular interview question is another variation of the 
+exercise we had earlier 
+so for this one we want to find the first repeated character
+
+solution:
+This is exercise is a little easier than the alternative
+
+so what we have to do is to check and see if
+the set has the character already 
+
+if it does we return the character of the string immediately
+if it does not we add the character to the array
