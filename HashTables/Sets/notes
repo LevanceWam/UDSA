@@ -1,0 +1,28 @@
+This is the notes for Sets
+
+In many of the programming languages we have a data structure that is similar
+to hash maps or hash tables but are slightly different 
+Hash map/tables map a key to a value 
+
+we have another data structure called a set and they 
+only have keys not values 
+these are very useful for solving problems just like the 
+hashes Sets do not allow duplicate keys 
+
+so if we have a list of numbers if we have any duplicates and we want 
+ton get rid of them if we add them to a set it will get rid of the duplicates
+
+sets have the same methods just like a hash table 
+add
+remove
+removeAll
+contains
+containsAll
+size
+clear
+
+NOTE*
+We have sets in JS!!
+
+Links:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
