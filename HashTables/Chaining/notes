@@ -1,0 +1,26 @@
+This is the notes for Chaining
+
+in the next few videos we are going to be looking at 
+some ways to deal with collisons
+
+The first way we are going to look at chaining 
+this invovles using a linked list to store multiple items 
+at the same array index
+
+Ex:
+let's say the size of our array is 5 so we have 5 cells or spots to 
+put values in. these cells are known as buckets or slots 
+intially all of our buckets are null or empty 
+
+now lets try inserting a key value pair of 6 and A 
+we pass the key to our hash function and the function will
+return the reminder of the list which will end up being index 1 in the array
+
+but it will not be directly in the cell instead it is going to be wrapped by a linked list node 
+and we are going to have the cell point to the linked list
+
+now if we use key value pair 8 and B it will go to index 3 wrapped in a linked list node
+next we have 11 and C now this will go to index 1 and store its value at the end of the linked list 
+
+this is the idea of chaining we are chaining a bunch of items together this is where the name comes from 
+with this approach we will no longer have collisons and the linked list will shrink and expand automatically 
