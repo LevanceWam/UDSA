@@ -1,0 +1,21 @@
+This is the notes for OpenAdressingDoubleHashing
+
+we learned with quadratic probing that we might end up with a 
+infinite loop because the algorithm generates the same steps 
+1,4,9 then it jumps back to the being of the array again and continues the steps
+
+This is where double hashing comes to the rescue with this algorithm 
+instead of i or i^2 we use a seperate independent  hash function to calcute the number of steps
+
+this is a popular second has function:
+hash2(key)=prime - (key%prime)
+prime should be a prime number that is smaller than the size of our table 
+where does the formula comes from no one know but the experts says it works 
+
+here is how we can calculate the index using a double hash algorithm
+(hash1(key) + i * hash2(key)) % table_size 
+we start with a intial hash value then we need to calculate the steps
+we are using i * hash2(key) this is the only difference 
+then we use % operator to reduce the result 
+
+we need to download the video
