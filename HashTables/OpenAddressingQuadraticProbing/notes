@@ -1,0 +1,26 @@
+This is the notes for OpenAddressingQuadraticProbing
+
+as we saw from the previous video clusters can form
+when we use the linear probing algorithm these clusters reduce performance
+
+to solve this issue we can use quadratic probing
+so the formula for linear probing was hash(key)+1
+quadratic probing is hash(key)+i^2
+
+how does this solve our problem exactly?
+
+well with linear probing we are incrementing i by 1 in each step
+so new key value pairs are stored next to each other 
+and form a cluster
+
+but if we use the quadratic formula our key value pairs get spread out more widely
+
+just to clearify this is a simplified version of 
+the formula for quadratic probing (hash(key)+1^2)
+here we ahve to set the % operater because this can get bigger than the boundary 
+of the array so we should always reduce it to the size of the array
+
+so the quadratic probing solves the clustering problem 
+but there is another problem that comes with this because we are doing big jumps  
+to get to a empty slot we end up back at the beginning of the array and we keep 
+iterating over the same steps this can lead to a infinite loop with linear probing we do not have this problem

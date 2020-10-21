@@ -1,0 +1,23 @@
+This is the notes for Collisions
+
+When we are generating hash values it is possible 
+that two distinct keys generate the same hash value 
+
+now lets say that our hash function generates the hash value of 10
+for storing 2 different values 
+We can not store 2 items at the same index this is what we call a Collision
+we have 2 values that are colliding 
+
+there are 2 ways to handle collisions
+
+One Way:
+one way is to have each cell in the array point to a linked list 
+so we are not going to store the values in the array itself
+we are going to store them in the linked list if we have a collision 
+then we simply add the new item to the end of the link list
+this is what we call chaining  because we are chaining the items 
+
+Second Way:
+The other solution is to find a different slot for storing the second value this is 
+what we call open addressing because we're finding a new address to store the second value 
+there are different open addressing algorithms

@@ -1,0 +1,46 @@
+This is the notes for OpenAddressingLinearProbing
+
+Here is another strategy for handling collisions we call it open
+addressing with this approach we do not store values in linked list 
+we store them directly in a cell or slots
+
+just like in the last lecture lets say that we have a hash table with 5 slots and we 
+want to store key value pairs 
+
+first one 6 and A since the key is 6 we are going to get 1 from the hash function
+so we store it at this slot with index 1
+then there is 8 and B  this one goes to index 3
+
+But now what about 11 and C 11 should go to 1 but there is already a key value pair there
+we have a collision
+to solve this  we need to look for another empty slot this is called probing which means searching
+
+we need to search for another location and this is the reason why the approach is called open address because the address of a key value 
+pair is not determined by the hash function we have to search for another empty slot 
+
+we have 3 searching or probing algorithms.
+
+the first one is called linear probing. 
+with this algorithm we start from the current slot if it is full 
+we go to the next slot if it is full again then we will go forward until 
+we get a empty one if we can not find a empty one then the table is full 
+this is one of the drawbacks of using the open addressing strategy 
+
+with the chaining strategy we do not have this problem because our linked list grows automatically 
+
+so back to the example 11 and c will be stored at index 2
+
+here is the formula for linear probing: hash(key) + i
+we start with the hash value and then increment by one at each step 
+so here i is like a loop variable that starts with zero and gets incremented until we find 
+the empty slot 
+
+because we are incrementing i at every step it is possible that i ends up being outside the boundary of 
+our array so we should apply the % operator and reduce the result to a range that can fit into the array 
+
+But there is a problem with this linear probing
+the 3 items that are stored next to each other form a cluster
+next time we want to store a new key value pair where the key falls in
+this range our probing is going to take longer because we have to pass all of these items in the cluster and add the new item 
+at the end of the cluster as a result the cluster will get bigger and this will
+make future probing slower

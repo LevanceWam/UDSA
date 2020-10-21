@@ -1,0 +1,21 @@
+This is the notes for HashFunctions
+
+going forward we are going to see how these data structures work 
+interally and why they are super fast
+
+earlier in the section we said that when we insert a key value pair in a hash table
+this hash table will get the key and based on this we'll figure out where to
+store this value in memory 
+
+but technically we store this value in an array so in more accurate terms the hash table 
+should map this key to a index value
+the index at whichbwe should store this value this is the job of a hash 
+function 
+
+a hash function is a function that get a value and maps it to a different kind of 
+value which we call a hash value a hash code digest
+
+now to the context of data structures a hash function maps a key 
+value to an index value.
+
+we need to download this video

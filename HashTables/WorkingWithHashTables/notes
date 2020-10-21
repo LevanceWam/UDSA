@@ -1,0 +1,81 @@
+This is the notes for WorkingWithHashTables
+
+First it is very important to know that in javascript and 
+python we are going to have to implement our own hash table 
+with javascript we are going to have to use objects and python
+we are going to have to use dictionaries
+
+so for this implementation lets say we want to store our employees in the hash table 
+we are going to need a key and a value 
+
+For the key we are going to use the employee number so for this exercise we are going to 
+let it be a number 
+Then for the value we are going to store the employee name or the employee object.
+or anything we want really 
+but for this exercise we are going to store the name 
+
+for this implementation of the hash table to work we are going to want to 
+make this with a linkedList this may bring up some problems because all of the operations 
+of the hash table are suppose to be O(1) and some of the operations for a linkedList
+is not O(1) but we will find a way to make this happen
+
+now we are going to take a look at some of the useful methods for this interface
+we have:
+Put for adding a key value pair in our hash map
+Ex. map.put(1, 'catcus')
+
+now if we insert a key value pair that has a key that already exist 
+the new one will overwrite the previous one 
+Ex. map.put(1, 'catcus'), map.put(1, 'jack')
+the console will show 1=jack
+
+now what about null values?
+so map.put(1, null)
+this is perfectly fine we can store null values in hash maps
+
+How about null keys?
+map.put(null, null)
+this is perfectly fine also 
+now this doesn't really have a application in the real world 
+but sometimes it can be asked in a interview if hash maps/tables allow null keys or null values 
+the answer is yes to the both of these 
+
+We also have a remove method for getting rid of a key value pair 
+map.remove(Key)
+
+we can get the value of the key using the get method 
+map.get(key)
+this will return a string or whatever we set our values to be 
+so we can store it in a variable and print it or use it for later 
+we can also check for the existence of a key or a value 
+map.containsKey(key)
+map.containsValue(value)
+
+Both of the contains methods return a boolean value 
+but they have different time complexities containsKey runs in O(1)
+but containsValue runs in O(n) 
+The reason for this is because when we call the containsKey method
+the hash map/table will getthus key and pass it to the hash function
+it will figure out where this object should be stored 
+if there is a object at that location it will return true otherwise it will 
+return false. this operation is super fast and does not involve iterating over
+all of the objects in contrast when we call
+containsValue the hash map/table can not rely on the hash function and it has 
+to iterate over all of the objects and compare the value with the argument 
+
+lastly we are going to learn how to iterate over hash maps 
+so we need a for in loop now
+we cant target the map directly and use bracket notation 
+instead we are going to need 2 methods map.keySet this returns all of the keys 
+and map.entrySet this returns the key and the value
+for (let item in map.keySet()){
+    console.log(item)
+}
+for (let item in map.entrySet()){
+    console.log(item)
+}
+
+this object that is being returned in the loop has some properties
+a couple of getters like to get the key or value 
+we can also set the value 
+

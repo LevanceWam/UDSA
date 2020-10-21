@@ -1,0 +1,58 @@
+This is the notes for ExerciseFindTheFirstNonRepeatedCharacter
+
+This is a popular interview question. it is finding the first non repeated 
+character in a string.
+
+So if we have a string like A Green Apple
+so we should write a method that will return g as the first non repeated character in the string
+we are going to work with lowercase words instead of trying to worry about captials and such.
+
+solution:
+
+first we are we are going to have to iterate through the string and 
+count each time a character is repeated 
+we are going to use a hash table to solve this 
+
+now to iterate through all of the characters in the string we 
+are going to need a for Of loop
+this will iterate through the character of the string indiviually
+
+With this till will allow us to push each character into the hash table
+
+now the main job of this loop is to see if in each iteration if we 
+have the character and if we do we increment it by 1 otherwise we insert it into the
+hashtable 
+
+so if map.containskey(ch) we need to read the value of the key
+by using map.get(ch) and store it in a variable called count 
+then we update it by calling the put method
+else if we dont have the character we need to set it to one
+
+Now this was a little repetitive so we decided to use a ternary to shorten it 
+I am going to write out the full if statement here for me to understand and 
+see the difference
+
+for (let ch of string){
+    if(map.containsKey(ch)){
+        let count = map.get(ch);
+        map.put(ch, count);
+    } else {
+        map.put(ch,1)
+    }
+}
+for some reason this iteration of the loop makes 'a' return?
+
+to make the ternary these are the steps taken 
+we created the variable count 
+this is where we will type the boolean expression
+ (map.containsKey(ch) ? map.get(ch)) so if we have the character we are going to
+ set its value if we don't we will set it to zero
+
+ now that we have the count we are going to use map.put(ch, count +1) to increment the value 
+
+now if we look at the map keys we are going to see that the characters did not enter the 
+hashtable the way we entered them 
+
+so we need to create another for loop that iterates the string characters again
+now we write a if statement if we get the character value from the hash table and it equals 1
+we return that and thats how we get the first non repeated character from a string;
