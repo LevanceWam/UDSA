@@ -175,3 +175,11 @@ Now what makes these hash tables so fast and how do they work. At a very high le
 </ul>
 
 <p>All of these Operations run in O(1) because the hash function tells us where in memory. Where we should store an object and look it up so. Now we don't have to iterate over the entire array of objects.</p>
+
+<h3>Hash Functions</h3>
+
+<p>Hash functions are used by hash tables to map a key to an index value. When we are storing items with different keys it is possible that the hash function returns the same index. This is called a collision and we have different strategies for handing collisions. We can use a linked list in each array cell this is called chaining. Likewise we can store them in the cell of an array but we are going to have to search or probe for a empty spot this is called open addressing.</p>
+
+<p>We have 3 probing algorithms: Linear probing, Quadratic probing, and Double Hashing. Linear probing we look for the adjecent slots this can cause clusters to form and slow down the future insertions or lookups. In Quadratic probing we make big jumps to avoid clusters from forming but we might end up in a infinite loop. In Double Hashing we use the second hash function to calcute the steps.</p>
+
+<a href="#home">Top</a>
