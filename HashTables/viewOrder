@@ -6,6 +6,7 @@ HashFunctions
 Collisions
 Chaining
 OpenAddressingLinearProbing
+OpenAddressingQuadraticProbing
 OpenAdressingDoubleHashing
 ExerciseBuildingAHashTable
 HashTablesExercises
