@@ -112,10 +112,15 @@
 <p>Stacks have 4 operations:</p>
 
 <ul>
+
 <li>Push (item) - This adds an item on top of the stack<li>
+
 <li>Pop() - This removes the last item on the stack<li>
+
 <li>Peek() - This returns the item on the top without removing the item from the stack.<li>
+
 <li>isEmpty() - This tells us if the stack is empty or not.<li>
+
 </ul>
 
 <p>Stacks do not have a look up because they were not meant for that. So we don't use stacks to store products, customers, and so on. So all of the operations in a stack are O(1).</p>
