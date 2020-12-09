@@ -1,4 +1,5 @@
 const _items = new WeakMap();
+const shiftItems = Symbol()
 
 class PriorityQueue {
     constructor(){
@@ -7,16 +8,23 @@ class PriorityQueue {
     }
 
     add(item){
-        let i = this.shiftItemsToInsert(item);
+        // our private method to determine the index of the new item 
+        let i = this[shiftItems](item);
     
+        // storing the item at the index number we calculated from the private method
         _items.get(this)[i] = item;
         this.count++;
     }
 
-    shiftItemsToInsert(item){
+    [shiftItems](item){
+        // we created a variable outside of the loop to store the value of i because we lose the value of i when we are done with the for loop
         let i;
         
         for(i = this.count-1; i >= 0; i--){
+            /**
+             * if the current element at this index is greater than the new item we are going to increment the elements index by 1 and store the element at the new index
+             * by shifting the element up we can now overwrite the old index with a new value 
+             */
             if(_items.get(this)[i] > item) _items.get(this)[i + 1] = _items.get(this)[i];
             else break;
         }
@@ -26,7 +34,7 @@ class PriorityQueue {
 
     remove(){
         this.count--;
-        return  _items.get(this).pop();
+        return  _items.get(this).shift();
     }
 
     getPQ(){
